@@ -8,9 +8,9 @@ void WU_InitCbCom(QComboBox* cbCom)
 #ifdef Q_OS_WIN
 	list << "Com1" << "Com2" << "Com3" << "Com4" << "Com5" << "Com6" << "Com7" << "Com8";
 #else
-    list<<"ttyUSB0"<<"ttyUSB1"<<"ttyUSB2"<<"ttyUSB3"<<"ttyUSB4"<<"ttyUSB5"
-          <<"ttyS0"<<"ttyS1"<<"ttyS2"<<"ttyS3"<<"ttyS4"<<"ttyS5"<<"ttyS6"
-         <<"ttyS7"<<"ttyS8"<<"ttyS9";
+    list<<"/dev/ttyUSB0"<<"/dev/ttyUSB1"<<"/dev/ttyUSB2"<<"/dev/ttyUSB3"<<"/dev/ttyUSB4"<<"/dev/ttyUSB5"
+          <<"/dev/ttyS0"<<"/dev/ttyS1"<<"/dev/ttyS2"<<"/dev/ttyS3"<<"/dev/ttyS4"<<"/dev/ttyS5"<<"/dev/ttyS6"
+         <<"/dev/ttyS7"<<"/dev/ttyS8"<<"/dev/ttyS9";
 #endif
 	cbCom->addItems(list);
 }
