@@ -51,7 +51,9 @@ void WU_InitCbStopBits(QComboBox* cbStopBits)
 	cbStopBits->clear();
 	cbStopBits->addItem("1", 1);
 	cbStopBits->addItem("2", 2);
+#ifdef Q_OS_WIN
 	cbStopBits->addItem("1.5", 3);
+#endif
 }
 
 void WU_InitCbFlowCtrl(QComboBox* cbFlowCtrl)

@@ -1,7 +1,7 @@
-#include "ComDialog.h"
-#include "ui_ComDialog.h"
-#include "QMessageBox.h"
-#include "WidgetUtil.h"
+#include "comdialog.h"
+#include "ui_comdialog.h"
+#include <QMessageBox>
+#include "widgetutil.h"
 #include <QSettings>
 #include <QRegExpValidator>
 #include <QRegExp>
@@ -155,10 +155,12 @@ void ComDialog::onOpen()
 	{
 		stopBits = STOP_2;
 	}
+#ifdef Q_OS_WIN
 	else if(WU_CbCurrentData(ui->cbStopBits) == 3)
 	{
 		stopBits = STOP_1_5;
 	}
+#endif
 	serialPort->setStopBits(stopBits);
 
 	ParityType parity = PAR_NONE;
