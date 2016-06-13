@@ -251,9 +251,9 @@ void ComDialog::SendData(QLineEdit* leSend)
 	quint8* buffer = new quint8[nLen];
 	Wu_HexString2Bin(buffer, nLen, strData.toLocal8Bit().data(), strData.count(), " ");
 	ui->teMain->append(tr("TX(%1): %2").arg(QTime::currentTime().toString("HH:mm:ss")).arg(strData));
-	delete[] buffer;
 
 	serialPort->write((const char*)buffer, nLen);
+	delete[] buffer;
 
 	m_nSendBytes += nLen;
 
