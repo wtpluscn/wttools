@@ -1,5 +1,6 @@
 #include "widgetutil.h"
 #include "qextserialport.h"
+#include "usbcom.h"
 
 void WU_InitCbCom(QComboBox* cbCom)
 {
@@ -7,6 +8,8 @@ void WU_InitCbCom(QComboBox* cbCom)
 	QStringList list;
 #ifdef Q_OS_WIN
 	list << "Com1" << "Com2" << "Com3" << "Com4" << "Com5" << "Com6" << "Com7" << "Com8";
+#elif defined USBCOM_ENABLE	
+	list = UsbComList();
 #else
     list<<"/dev/ttyUSB0"<<"/dev/ttyUSB1"<<"/dev/ttyUSB2"<<"/dev/ttyUSB3"<<"/dev/ttyUSB4"<<"/dev/ttyUSB5"
           <<"/dev/ttyS0"<<"/dev/ttyS1"<<"/dev/ttyS2"<<"/dev/ttyS3"<<"/dev/ttyS4"<<"/dev/ttyS5"<<"/dev/ttyS6"

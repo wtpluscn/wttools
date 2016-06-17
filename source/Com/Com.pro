@@ -8,14 +8,16 @@ include (../def.pri)
 SOURCES += 	source/main.cpp \
 			source/comdialog.cpp \
 			source/qextserialport.cpp \
-			source/widgetutil.cpp 
+			source/widgetutil.cpp \
+			source/usbcom.cpp 
 			
 
 HEADERS  += include/comdialog.h \
 			include/qextserialport.h \
 			include/qextserialport_p.h \
 			include/qextserialport_global.h \
-			include/widgetutil.h 
+			include/widgetutil.h \
+			include/usbcom.h
 			
 
 win32 { SOURCES += source/qextserialport_win.cpp }
