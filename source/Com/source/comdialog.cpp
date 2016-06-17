@@ -132,7 +132,11 @@ void ComDialog::onOpen()
 		return;
 	}
     serialPort->flush();
+#ifdef USBCOM_ENABLE
+	serialPort->setPortName(UsbCom_Def2Real(strCom));
+#else
 	serialPort->setPortName(strCom);
+#endif
 	if (!serialPort->open(QIODevice::ReadWrite))
 	{
 		ui->teMain->append(tr("Open %1 failed").arg(strCom));
