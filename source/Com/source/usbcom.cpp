@@ -34,6 +34,6 @@ QString UsbCom_Def2Real(QString strDef)
 QStringList UsbComList()
 {
 	QStringList list;
-	list << "UsbCom3" << "UsbCom4" << "UsbCom4" << "UsbCom5";
+	list << "UsbCom2" << "UsbCom3" << "UsbCom4" << "UsbCom5";
 	return list;
 }

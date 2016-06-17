@@ -8,6 +8,8 @@
 #include <QDateTime>
 #include <QUrl>
 #include <QDesktopServices>
+#include "usbcom.h"
+
 
 ComDialog::ComDialog(QDialog *parent) :
 	QDialog(parent),
