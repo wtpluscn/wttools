@@ -1,3 +1,5 @@
 TEMPLATE = subdirs
 
-SUBDIRS = 	Com	
+SUBDIRS = 	Com	\
+			TcpCli \
+			TcpSrv

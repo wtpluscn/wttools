@@ -4,10 +4,10 @@
 #include <QDebug>
 //board usb
 //ttyUSB0 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.1/1-1.1:1.0/ttyUSB0/tty/ttyUSB0
-//ttyUSB0 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2:1.0/ttyUSB1/tty/ttyUSB1
+//ttyUSB1 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2:1.0/ttyUSB1/tty/ttyUSB1
 //usb hub
 //ttyUSB0 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/ttyUSB0/tty/ttyUSB0
-//ttyUSB0 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/ttyUSB1/tty/ttyUSB1
+//ttyUSB1 -> ../../devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/ttyUSB1/tty/ttyUSB1
 QString UsbCom_Def2Real(QString strDef)
 {
 	QDir dir("/sys/class/tty");
