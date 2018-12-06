@@ -6,6 +6,17 @@
 *.user
 *.userosscache
 *.sln.docstates
+.qmake.stash
+*_resource.rc
+
+# Self define files
+Makefile
+Makefile.Debug
+Makefile.Release
+*.qm
+ui_*.h
+*.vcxproj
+*.vcxproj.*
 
 # Build results
 [Dd]ebug/
