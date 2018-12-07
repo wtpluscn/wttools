@@ -314,13 +314,13 @@ void TcpGateDialog::onRead()
 	{
 		ndRx = &m_ndConnect;
 		ndTx = &m_ndListen;
-		strSrc = tr("from listen:");
+		strSrc = tr("from connect:");
 	}
 	else
 	{
 		ndRx = &m_ndListen;
 		ndTx = &m_ndConnect;
-		strSrc = tr("from connect:");
+		strSrc = tr("from listen:");
 	}
 	
 	QByteArray  arData = tcpSocket->readAll();
